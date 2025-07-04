@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ჩვენი გუნდი</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .hero {
+      background-color: #1e3a8a;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    #language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    #language-switcher button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .block {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 500px;
+    }
+
+    .block img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: contain;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    .block-content {
+      padding: 20px;
+    }
+
+    .title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #003399;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.9em;
+      color: #333;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div id="language-switcher">
+      <button onclick="setLanguage('ka')">ქარ</button>
+      <button onclick="setLanguage('en')">ENG</button>
+    </div>
+    <h1 data-lang-ka="ჩვენი გუნდი" data-lang-en="Our Team">ჩვენი გუნდი</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="block">
+      <img src="Valeri Mosiashvili.jpg" alt="ვალერი მოსიაშვილი">
+      <div class="block-content">
+        <div class="title" data-lang-ka="ვალერი მოსიაშვილი" data-lang-en="Valeri Mosiashvili">ვალერი მოსიაშვილი</div>
+        <div class="subtitle" data-lang-ka="დამფუძნებელი და ხელმძღვანელი" data-lang-en="Founder and Leader">დამფუძნებელი. დირექტორი</div>
+        <div class="description" data-lang-ka="დამფუძნებელია ეკონომიკის კვლევის და განვითარების ინსტიტუტის და ხელმძღვანელობს ორგანიზაციის სტრატეგიულ მიმართულებებს." data-lang-en="Founder of the Institute for Economic Research and Development and leads its strategic initiatives.">
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <img src="Lamara Qoqiauri.jpg" alt="ლამარა ქოქიაური">
+      <div class="block-content">
+        <div class="title" data-lang-ka="ლამარა ქოქიაური" data-lang-en="Lamara Qoqiauri">ლამარა ქოქიაური</div>
+        <div class="subtitle" data-lang-ka="სამეცნიერო-კვლევითი მიმართულების მენეჯერი" data-lang-en="Scientific Research Manager">სამეცნიერო-კვლევითი მიმართულების მენეჯერი</div>
+        <div class="description" data-lang-ka="ხელმძღვანელობს სამეცნიერო პროექტებს, აკოორდინებს კვლევებსა და თანამშრომლობს საგანმანათლებლო სექტორთან." data-lang-en="Leads scientific projects, coordinates research and collaborates with the academic sector.">
+          
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-ka]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-lang-${lang}`);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>

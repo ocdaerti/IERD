@@ -22,10 +22,24 @@
       padding: 60px 20px;
       text-align: center;
       margin-bottom: 40px;
+      position: relative;
     }
 
     .hero h1 {
       font-size: 2.5em;
+    }
+
+    #language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    #language-switcher button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .container {
@@ -85,76 +99,99 @@
 <body>
 
   <header class="hero">
-    <h1>ეკონომიკის კვლევის და განვითარების ინსტიტუტის პროექტები</h1>
+    <div id="language-switcher">
+      <button onclick="setLanguage('ka')">ქარ</button>
+      <button onclick="setLanguage('en')">ENG</button>
+    </div>
+    <h1 data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტის პროექტები" data-lang-en="Projects of the Institute for Economic Research and Development">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტის პროექტები
+    </h1>
   </header>
 
   <div class="container">
-    
-  <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_july-15-2018-international-scientific-activity-7334277408964898816-EqvL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFY9xuwBNJmVUHrGrj8FpOQcyofv-jw-WIE" target="_blank" style="text-decoration: none;">
-  <div class="block">
-    <img src="conf_2018.avif" alt="ქარელი">
-    <div class="block-content">
-      <div class="title">ქარელი</div>
-      <div class="subtitle">15/07/2018</div>
-      <div class="description">პირველი სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".</div>
-    </div>
-  </div>
-</a>
 
-
-
-
-   <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_july-15-2018-international-scientific-activity-7334277408964898816-EqvL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFY9xuwBNJmVUHrGrj8FpOQcyofv-jw-WIE " target="_blank" style="text-decoration: none;">
-    <div class="block">
-      <img src="ბაქო 2019.jpg" alt="ბაქო">
-      <div class="block-content">
-        <div class="title">ბაქო</div>
-        <div class="subtitle">22-24/02/2019</div>
-        <div class="description">მეორე საერთაშორისო სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".</div>
+    <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_july-15-2018-international-scientific-activity-7334277408964898816-EqvL" target="_blank" style="text-decoration: none;">
+      <div class="block">
+        <img src="conf_2018.avif" alt="ქარელი">
+        <div class="block-content">
+          <div class="title" data-lang-ka="ქარელი" data-lang-en="Kareli">ქარელი</div>
+          <div class="subtitle">15/07/2018</div>
+          <div class="description" data-lang-ka="პირველი სამეცნიერო კონფერენცია \"მეცნიერება პრაქტიკისა და განვითარებისთვის\"." data-lang-en="First scientific conference 'Science for Practice and Development'.">
+            პირველი სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".
+          </div>
+        </div>
       </div>
-    </div>
-  </a>
+    </a>
 
-
-
-  <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_26-july-2019-international-scientific-activity-7334275348844400640-sFv9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFY9xuwBNJmVUHrGrj8FpOQcyofv-jw-WIE" target="_blank" style="text-decoration: none;">
-    <div class="block">
-      <img src="რიგა 2019.jpg" alt="რიგა">
-      <div class="block-content">
-        <div class="title">რიგა</div>
-        <div class="subtitle">24-28/07/2019</div>
-        <div class="description">პირველი სამეცნიერო კონფერენცია: „საზოგადოების ინსტიტუციური, ეკონომიკური და კულტურული განვითარების პარადიგმები“.</div>
+    <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_july-15-2018-international-scientific-activity-7334277408964898816-EqvL" target="_blank" style="text-decoration: none;">
+      <div class="block">
+        <img src="ბაქო 2019.jpg" alt="ბაქო">
+        <div class="block-content">
+          <div class="title" data-lang-ka="ბაქო" data-lang-en="Baku">ბაქო</div>
+          <div class="subtitle">22-24/02/2019</div>
+          <div class="description" data-lang-ka="მეორე საერთაშორისო სამეცნიერო კონფერენცია \"მეცნიერება პრაქტიკისა და განვითარებისთვის\"." data-lang-en="Second international scientific conference 'Science for Practice and Development'.">
+            მეორე საერთაშორისო სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".
+          </div>
+        </div>
       </div>
-    </div>
+    </a>
+
+    <a href="https://www.linkedin.com/posts/ired-institute-for-economic-research-and-development_26-july-2019-international-scientific-activity-7334275348844400640-sFv9" target="_blank" style="text-decoration: none;">
+      <div class="block">
+        <img src="რიგა 2019.jpg" alt="რიგა">
+        <div class="block-content">
+          <div class="title" data-lang-ka="რიგა" data-lang-en="Riga">რიგა</div>
+          <div class="subtitle">24-28/07/2019</div>
+          <div class="description" data-lang-ka="პირველი სამეცნიერო კონფერენცია: \"საზოგადოების ინსტიტუციური, ეკონომიკური და კულტურული განვითარების პარადიგმები\"." data-lang-en="First scientific conference: 'Paradigms of Institutional, Economic and Cultural Development of Society'.">
+            პირველი სამეცნიერო კონფერენცია: „საზოგადოების ინსტიტუციური, ეკონომიკური და კულტურული განვითარების პარადიგმები“.
+          </div>
+        </div>
+      </div>
     </a>
 
     <div class="block">
       <img src="https://via.placeholder.com/400x180" alt="ქუთაისი">
       <div class="block-content">
-        <div class="title">ქუთაისი</div>
+        <div class="title" data-lang-ka="ქუთაისი" data-lang-en="Kutaisi">ქუთაისი</div>
         <div class="subtitle">21/11/2019</div>
-        <div class="description">საერთაშორისო სამეცნიერო კონფერენცია.</div>
+        <div class="description" data-lang-ka="საერთაშორისო სამეცნიერო კონფერენცია." data-lang-en="International scientific conference.">
+          საერთაშორისო სამეცნიერო კონფერენცია.
+        </div>
       </div>
     </div>
 
     <div class="block">
-      <div class="blue-highlight">ბაქო</div>
+      <div class="blue-highlight" data-lang-ka="ბაქო" data-lang-en="Baku">ბაქო</div>
       <div class="block-content">
         <div class="subtitle">21-23/02/2020</div>
-        <div class="description">მესამე საერთაშორისო სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".</div>
+        <div class="description" data-lang-ka="მესამე საერთაშორისო სამეცნიერო კონფერენცია \"მეცნიერება პრაქტიკისა და განვითარებისთვის\"." data-lang-en="Third international scientific conference 'Science for Practice and Development'.">
+          მესამე საერთაშორისო სამეცნიერო კონფერენცია "მეცნიერება პრაქტიკისა და განვითარებისთვის".
+        </div>
       </div>
     </div>
 
     <div class="block">
       <img src="https://via.placeholder.com/400x180" alt="ონლაინ">
       <div class="block-content">
-        <div class="title">ონლაინ</div>
+        <div class="title" data-lang-ka="ონლაინ" data-lang-en="Online">ონლაინ</div>
         <div class="subtitle">12/02/2021</div>
-        <div class="description">ონლაინ სამეცნიერო კონფერენცია.</div>
+        <div class="description" data-lang-ka="ონლაინ სამეცნიერო კონფერენცია." data-lang-en="Online scientific conference.">
+          ონლაინ სამეცნიერო კონფერენცია.
+        </div>
       </div>
     </div>
 
-    
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-ka]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-lang-${lang}`);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
 
 </body>
 </html>

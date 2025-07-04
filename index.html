@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="ka">
-    
 <head>
-    
-    
   <meta charset="UTF-8">
   <title>ეკგი</title>
   <link rel="stylesheet" href="style.css">
@@ -18,9 +15,6 @@
       font-family: "Segoe UI", sans-serif;
       background-color: #f9f9f9;
       color: #333;
-
-
-
       line-height: 1.6;
     }
 
@@ -29,6 +23,7 @@
       color: white;
       padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
 
     .hero h1 {
@@ -38,6 +33,19 @@
 
     .hero p {
       font-size: 1.2em;
+    }
+
+    #language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    #language-switcher button {
+      margin: 0 5px;
+      padding: 5px 10px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .section {
@@ -80,68 +88,86 @@
   </style>
 </head>
 <body>
- <header class="hero">
-  <div class="hero-content" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <img src="2.png" alt="ლოგო" style="width: 70px; height: auto;">
-    <div>
-      <h1>ეკონომიკის კვლევის და განვითარების ინსტიტუტი</h1>
-      <p>წარმოგიდგენთ ჩვენს ხედვას </p>
+  <header class="hero">
+    <div id="language-switcher">
+      <button onclick="setLanguage('ka')">ქარ</button>
+      <button onclick="setLanguage('en')">ENG</button>
     </div>
-  </div>
-</header>
-
+    <div class="hero-content" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+      <img src="2.png" alt="ლოგო" style="width: 70px; height: auto;">
+      <div>
+        <h1 data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტი" data-lang-en="Institute for Economic Research and Development">
+          ეკონომიკის კვლევის და განვითარების ინსტიტუტი
+        </h1>
+        <p data-lang-ka="წარმოგიდგენთ ჩვენს ხედვას" data-lang-en="Presenting our vision">
+          წარმოგიდგენთ ჩვენს ხედვას
+        </p>
+      </div>
+    </div>
   </header>
 
   <section class="section about">
-    <h2>ჩვენს შესახებ</h2>
+    <h2 data-lang-ka="ჩვენს შესახებ" data-lang-en="About Us">ჩვენს შესახებ</h2>
     <br>
-    
-    <p>ეკონომიკის კვლევის და განვითარების ინსტიტუტი დაარსდა კვალიფიციური ეკონომისტების და ფინანსისტების მიერ, რომელთაც  განათლების და მეცნიერების სფეროში მუშაობის 20 წლის გამოცდილება აქვთ. ორგანიზაცია წარმატებით მუშაობს ბიზნეს და საზოგადოებრივ სექტორებში.
+    <p data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტი დაარსდა კვალიფიციური ეკონომისტების და ფინანსისტების მიერ, რომელთაც განათლების და მეცნიერების სფეროში მუშაობის 20 წლის გამოცდილება აქვთ. ორგანიზაცია წარმატებით მუშაობს ბიზნეს და საზოგადოებრივ სექტორებში. საერთაშორისო პროექტებში მონაწილეობა და წამყვან უნივერსიტეტებთან თანამშრომლობა საშუალებას გვაძლევს თვალყური ვადევნოთ და გავიზიაროთ ეკონომიკის კვლევით სფეროში არსებული სიახლეები, შევქმნათ ახალი მეთოდოლოგიები და პროდუქტები, ღრმა და არგუმენტირებული ანალიზისათვის. ორგანიზაციის მისია არის საქართველოში ეკონომიკური განათლებისა და მეცნიერების განვითარების პრაქტიკული მექანიზმების შემუშავება, განათლების რეფორმაში სამოქალაქო და პროფესიული საზოგადოების ჩართულობის გაზრდა. განათლების და მეცნიერების სფეროს მუშაკთა პროფესიული განვითარების ხელშეწყობა." data-lang-en="The Institute for Economic Research and Development was founded by qualified economists and financiers with 20 years of experience in education and science. The organization operates successfully in both business and public sectors. Participation in international projects and cooperation with leading universities allows us to follow and adopt innovations in economic research, create new methodologies and products for in-depth and reasoned analysis. The mission of the organization is to develop practical mechanisms for the development of economic education and science in Georgia, to increase the involvement of civil and professional society in education reform, and to promote the professional development of education and science workers.">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტი დაარსდა კვალიფიციური ეკონომისტების და ფინანსისტების მიერ, რომელთაც განათლების და მეცნიერების სფეროში მუშაობის 20 წლის გამოცდილება აქვთ. ორგანიზაცია წარმატებით მუშაობს ბიზნეს და საზოგადოებრივ სექტორებში. საერთაშორისო პროექტებში მონაწილეობა და წამყვან უნივერსიტეტებთან თანამშრომლობა საშუალებას გვაძლევს თვალყური ვადევნოთ და გავიზიაროთ ეკონომიკის კვლევით სფეროში არსებული სიახლეები, შევქმნათ ახალი მეთოდოლოგიები და პროდუქტები, ღრმა და არგუმენტირებული ანალიზისათვის. ორგანიზაციის მისია არის საქართველოში ეკონომიკური განათლებისა და მეცნიერების განვითარების პრაქტიკული მექანიზმების შემუშავება, განათლების რეფორმაში სამოქალაქო და პროფესიული საზოგადოების ჩართულობის გაზრდა. განათლების და მეცნიერების სფეროს მუშაკთა პროფესიული განვითარების ხელშეწყობა.
+    </p>
+ <br> <br> 
 
-საერთაშორისო პროექტებში მონაწილეობა და წამყვან უნივერსიტეტებთან თანამშრომლობა საშუალებას გვაძლევს თვალყური ვადევნოთ და გავიზიაროთ ეკონომიკის კვლევით სფეროში არსებული სიახლეები, შევქმნათ ახალი მეთოდოლოგიები და პროდუქტები, ღრმა და არგუმენტირებული ანალიზისათვის.
-
-ორგანიზაციის მისია არის საქართველოში ეკონომიკური განათლებისა და მეცნიერების განვითარების პრაქტიკული მექანიზმების შემუშავება, განათლების რეფორმაში სამოქალაქო და პროფესიული საზოგადოების ჩართულობის გაზრდა. განათლების და მეცნიერების სფეროს მუშაკთა პროფესიული განვითარების ხელშეწყობა.
-
-​
-<p>
-    <br>
-  
-  <br><br>
-  <strong class="director">ეკონომიკის კვლევის და განვითარების ინსტიტუტის დირექტორი: პროფესორი ვალერი მოსიაშვილი.</strong>
-</p>
-<br> <br>
- 
- 
-<h2>მიმართულებები</h2>
-<p> სამეცნიერო კონფერენციების ორგანიზება, სამეცნიერო ჟურნალის გამოცემა, ღონიზღიებების მენეჯმენტი, საგამოფენო მომსახურება, ფინანსური კონსალტინგი​, სემინარებისა და ტრენინგების ორგანიზება, HR სერვისი, სენიორ ექსპერტთა სერვისი (SES), ​ბიზნეს-ქოუჩინგი, ბაზრის კვლევა, კონსულტაცია ბაზრის შესახებ, დროებითი პერსონალი, საოფისე მომსახურება, მთარგმნელობითი მომსახურება. </p>
-  
-</section>
+    <h2 data-lang-ka="მიმართულებები" data-lang-en="Directions">მიმართულებები</h2>
+    <p data-lang-ka="სამეცნიერო კონფერენციების ორგანიზება, სამეცნიერო ჟურნალის გამოცემა, ღონისძიებების მენეჯმენტი, საგამოფენო მომსახურება, ფინანსური კონსალტინგი, სემინარებისა და ტრენინგების ორგანიზება, HR სერვისი, სენიორ ექსპერტთა სერვისი (SES), ბიზნეს-ქოუჩინგი, ბაზრის კვლევა, კონსულტაცია ბაზრის შესახებ, დროებითი პერსონალი, საოფისე მომსახურება, მთარგმნელობითი მომსახურება." data-lang-en="Organizing scientific conferences, publishing scientific journals, event management, exhibition services, financial consulting, organizing seminars and trainings, HR service, senior expert service (SES), business coaching, market research, market consultation, temporary staff, office services, translation services.">
+      სამეცნიერო კონფერენციების ორგანიზება, სამეცნიერო ჟურნალის გამოცემა, ღონისძიებების მენეჯმენტი, საგამოფენო მომსახურება, ფინანსური კონსალტინგი, სემინარებისა და ტრენინგების ორგანიზება, HR სერვისი, სენიორ ექსპერტთა სერვისი (SES), ბიზნეს-ქოუჩინგი, ბაზრის კვლევა, კონსულტაცია ბაზრის შესახებ, დროებითი პერსონალი, საოფისე მომსახურება, მთარგმნელობითი მომსახურება.
+    </p>
+  </section>
 
   <section class="section services">
-    <h2>ჩვენი სერვისები</h2>
+    <h2 data-lang-ka="ჩვენი სერვისები" data-lang-en="Our Services">ჩვენი სერვისები</h2>
     <div class="service-boxes">
-      <div class="service-box">
-  <a href="პროექტები.html" class="custom-link" style="text-decoration: none;">
-    <h3>პროექტები</h3>
-  </a>
-  <p>ეკონომიკის კვლევის და განვითარების ინსტიტუტის მიერ ჩატარებული ღონისძიებები.</p>
+  <div class="service-box">
+    <a href="პროექტები.html" class="custom-link" style="text-decoration: none;">
+      <h3 data-lang-ka="პროექტები" data-lang-en="Projects">პროექტები</h3>
+    </a>
+    <p data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტის მიერ ჩატარებული ღონისძიებები." data-lang-en="Events organized by the Institute.">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტის მიერ ჩატარებული ღონისძიებები.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <h3 data-lang-ka="პარტნიორები" data-lang-en="Partners">პარტნიორები</h3>
+    <p data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტის პარტნიორები." data-lang-en="Partners of the Institute.">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტის პარტნიორები.
+    </p>
+  </div>
+
+  <div class="service-box">
+    <a href="ჩვენი გუნდი.html" class="custom-link" style="text-decoration: none;">
+      <h3 data-lang-ka="ჩვენი გუნდი" data-lang-en="Our Team">ჩვენი გუნდი</h3>
+    </a>
+    <p data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტის გუნდი." data-lang-en="Team of the Institute.">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტის გუნდი.
+    </p>
+  </div>
 </div>
 
-      <div class="service-box">
-        <h3>პარტნიორები</h3>
-        <p>ეკონომიკის კვლევის და განვითარების ინსტიტუტის პარტნიორები.</p>
-      </div>
-      <div class="service-box">
-        <h3>კონტაქტი</h3>
-        <p>ეკონომიკის კვლევის და განვითარების ინსტიტუტის საკონტაქტო.</p>
-      </div>
-    </div>
-  </section>
+
 
   <section class="section contact">
-    <h2>ეკონომიკის კვლევის და განვითარების ინსტიტუტი</h2>
-    <p>მოგვწერეთ და ერთად ვიპოვით თქვენთვის იდეალურ გადაწყვეტას!</p>
+    <h2 data-lang-ka="ეკონომიკის კვლევის და განვითარების ინსტიტუტი" data-lang-en="Institute for Economic Research and Development">
+      ეკონომიკის კვლევის და განვითარების ინსტიტუტი
+    </h2>
+    <p data-lang-ka="მოგვწერეთ და ერთად ვიპოვით თქვენთვის იდეალურ გადაწყვეტას!" data-lang-en="Write to us and together we will find the ideal solution for you!">
+      მოგვწერეთ და ერთად ვიპოვით თქვენთვის იდეალურ გადაწყვეტას!
+    </p>
   </section>
-  
+
+  <script>
+    function setLanguage(lang) {
+      const elements = document.querySelectorAll('[data-lang-ka]');
+      elements.forEach(el => {
+        el.textContent = el.getAttribute(`data-lang-${lang}`);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
 </body>
 </html>
